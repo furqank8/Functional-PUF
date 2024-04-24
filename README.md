@@ -95,24 +95,18 @@ reccomended: **https://jax.readthedocs.io/en/latest/notebooks/Common_Gotchas_in_
 
 # Simple Flow Diagram
 
-XOR PUF --> [Seed Generation] --> [PRNG] --> [Generate Weights] -->  [Generate 1 Weight] --> [return XOR weights]
-    |                                                                                     
-    v 
+[XOR PUF] --> [Seed Generation] --> [PRNG] --> [Generate Weights] -->  [Generate 1 Weight] --> [return XOR weights]
+    
 [Generate New Key] --> [Generate Challenges] --> [Initialize Challenge Filter] --> [XOR Filtered Challenges]
-    |                                                                                     
-    v 
+  
 [XOR Filtered Challenges] --> [XOR Weights] --> [XOR Response]
-    |                                                                                     
-    v 
+   
 [X1 Attack] --> [Run ES Loop] --> [Fitness Calculation (X1)] --> [Update Learned Weights] 
-    |                                                                                     
-    v 
+   
 [XN Attack] --> [Run ES Loop] --> [Fitness Calculation (Xn)] --> [Fitness direct comparison] --> [Update Learned Weights] 
-    |                                                                                     
-    v 
+   
 [Generate Validation Challenges]
-    |                                                                                     
-    v 
+ 
 [Calculate Learned Response] --> [Accuracy Calculation] --> [Results]
 
 ##### Step-by-Step Explanation for XOR PUF Attack
